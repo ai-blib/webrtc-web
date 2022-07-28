@@ -358,6 +358,7 @@ export default {
         if (event.candidate) { socket.emit('addIceCandidate', { candidate: event.candidate, user: this.user }); }
       };
       this.peer.onaddstream = (event) => {
+           console.log( event.stream)
         // 拿到对方的视频流
         document.querySelector('#echat-remote-1').srcObject = event.stream;
       };
